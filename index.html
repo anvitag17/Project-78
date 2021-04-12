@@ -1,0 +1,69 @@
+<html>
+  <body>
+    <p id="header">Family Book</p>
+    <img
+      id="images"
+      src="https://kbimages1-a.akamaihd.net/73c58c2c-c205-49ac-a745-86d25c8081ee/1200/1200/False/the-family-book.jpg"
+    />
+    <p id="names">The Family Book</p>
+    <div>
+      <style>
+        body {
+          text-align: center;
+        }
+        #header {
+          font-size: 30px;
+        }
+        #images {
+          border: 30px groove #9bf3ff;
+          padding: 2px;
+          height: 400px;
+        }
+        #anvita {
+          color: coral;
+          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        }
+        #ashrita {
+          color: mediumpurple;
+          font-family: "Courier New", Courier, monospace;
+        }
+        #mom {
+          color: fuchsia;
+          font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        }
+        #dad {
+          color: cornflowerblue;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+      </style>
+      <script>
+        var images = [
+          "AnvitaCartoon.png",
+          "AshritaCartoon.png",
+          "MomCartoon.png",
+          "DadCartoon.png",
+        ];
+
+        var names = [
+          "<div id=anvita>Anvita</div>",
+          "<div id=ashrita>Ashrita</div>",
+          "<div id=mom>Mom</div>",
+          "<div id=dad>Dad</div>",
+        ];
+
+        var i = 0;
+        function nextslide() {
+          if (i == 4) {
+            i = 0;
+          }
+
+          document.getElementById("images").src = images[i];
+          document.getElementById("names").innerHTML = names[i];
+
+          i++;
+        }
+      </script>
+      <button type="button" onclick="nextslide()">Move</button>
+    </div>
+  </body>
+</html>
